@@ -74,9 +74,15 @@
     .hero-note .line { width: 35px; height: 1px; background: var(--accent); }
     .hero-art { min-height: 460px; position: relative; isolation: isolate; display: grid; place-items: center; overflow: hidden; border: 1px solid var(--line); border-radius: 30px; background: linear-gradient(145deg, #3A252A, #241B1E); }
     .hero-art::before { content: ""; position: absolute; inset: 0; z-index: -2; background-image: linear-gradient(rgba(255,244,237,.10) 1px, transparent 1px), linear-gradient(90deg, rgba(255,244,237,.10) 1px, transparent 1px); background-size: 36px 36px; mask-image: linear-gradient(black, transparent 90%); opacity: .18; }
-    .orb { position: absolute; width: min(31vw, 350px); aspect-ratio: 1; border-radius: 50%; background: linear-gradient(145deg, rgba(45,32,34,.08), rgba(45,32,34,.18)), url("field-photo.jpg") center 55% / cover no-repeat; filter: saturate(.88) contrast(1.02); border: 1px solid rgba(255,248,241,.34); box-shadow: inset -24px -25px 50px rgba(0,0,0,.25), 0 0 110px rgba(122,38,58,.24); animation: float 7s ease-in-out infinite; }
-    .orb::before { content: ""; position: absolute; inset: -12%; border: 1px solid rgba(215,155,145,.48); border-radius: 50%; transform: rotateX(68deg) rotateZ(-27deg); }
-    .orb::after { content: ""; position: absolute; inset: -22%; border: 1px solid rgba(255,239,230,.25); border-radius: 50%; transform: rotateX(68deg) rotateZ(30deg); }
+    .orb {
+      position: absolute;
+      width: min(34vw, 420px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      object-fit: cover;
+      animation: float 7s ease-in-out infinite;
+      box-shadow: 0 25px 80px rgba(122, 38, 58, .25);
+    }
     .art-label { position: absolute; font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: .08em; color: #F4EAE2; }
     .art-label.top { top: 24px; left: 24px; }
     .art-label.bottom { bottom: 24px; right: 24px; text-align: right; }
@@ -272,7 +278,11 @@
       </div>
       <div class="hero-art" aria-label="현장 사진과 라이브 신호 그래픽">
         <div class="art-label top">FIG. 01 — FIELD IN MOTION</div>
-        <div class="orb" aria-hidden="true"></div>
+        <img
+          class="orb"
+          src="./field-photo.jpg"
+          alt="공연 현장 사진"
+        />
         <div class="floating-index">01 / 04</div>
         <div class="signal-card" aria-hidden="true">
           <div class="signal-head"><span>LIVE SYSTEM</span><span class="live-dot"></span></div>

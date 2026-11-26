@@ -164,7 +164,11 @@
     .skill-group h3 { margin: 0 0 14px; font: 10px ui-monospace, monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
     .skill-tags { display: flex; flex-wrap: wrap; gap: 9px; }
     .skill-tags span { border: 1px solid var(--line); background: #FFFCF8; border-radius: 999px; padding: 9px 13px; font-size: 12px; color: #594A46; }
-    .skill-tags span.featured { color: var(--accent); border-color: rgba(122,38,58,.38); background: rgba(122,38,58,.055); }
+    .skill-tags span.featured {
+      color: #594A46;
+      border-color: var(--line);
+      background: #FFFCF8;
+    }
 
     .education-row { display: grid; grid-template-columns: 180px 1fr; gap: 30px; padding: 24px 0; border-bottom: 1px solid var(--line); }
     .education-row:first-child { border-top: 1px solid var(--line); }
